@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Kartik Gauttam - ML Engineer & Software Developer",
   description:
     "Machine Learning Engineer & Software Engineer with experience in Website, Mobile, and Software development. Check out my projects and skills.",
-    generator: 'v0.dev'
+    generator: 'Kartik Gauttam'
 }
 
 export default function RootLayout({
