@@ -1,12 +1,12 @@
 {
-  "homepage": "https://Kartikgauttam14.github.io/my-portfolio/",
-  "name": "my-portfolio",
+  "homepage": "https://kartikgauttam14.github.io/Portfolio/",
+  "name": "Portfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "build": "next build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "predeploy": "next build",
+    "deploy": "gh-pages -d out",
     "dev": "next dev",
     "lint": "next lint",
     "start": "next start"
