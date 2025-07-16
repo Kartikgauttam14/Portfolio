@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Mail, MapPin, Phone, Github, Linkedin, Send } from "lucide-react"
 import Link from "next/link"
-import { sendContactEmail } from "@/actions/contact"
+
 
 export function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -18,7 +18,20 @@ export function Contact() {
     setSubmitMessage(null)
 
     try {
-      const result = await sendContactEmail(formData)
+      const data = {
+        firstName: formData.get("firstName"),
+        lastName: formData.get("lastName"),
+        email: formData.get("email"),
+        subject: formData.get("subject"),
+        message: formData.get("message"),
+      }
+
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      })
+      const result = await response.json()
 
       setSubmitMessage({
         type: result.success ? "success" : "error",

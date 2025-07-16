@@ -1,4 +1,3 @@
-"use server"
 
 export async function sendContactEmail(formData: FormData) {
   const firstName = formData.get("firstName") as string
