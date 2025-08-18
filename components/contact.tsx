@@ -1,5 +1,6 @@
 "use client"
 
+
 import { useState } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -55,107 +56,58 @@ export function Contact() {
 
   return (
     <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 relative">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">Get In Touch</h2>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-            Ready to collaborate on your next project? Let's discuss how we can work together.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-12">
-          <div>
-            <h3 className="text-2xl font-semibold text-white mb-6">Let's Connect</h3>
-            <p className="text-gray-300 mb-8 leading-relaxed">
-              I'm always interested in new opportunities, challenging projects, and meaningful collaborations. Whether
-              you have a project in mind or just want to chat about technology, feel free to reach out.
-            </p>
-
-            <div className="space-y-4 mb-8">
-              <div className="flex items-center gap-3 text-gray-300">
-                <Mail className="w-5 h-5 text-purple-400" />
-                <Link href="mailto:Kartikgauttam6@gmail.com" className="hover:text-purple-400 transition-colors">
-                  Kartikgauttam6@gmail.com
-                </Link>
-              </div>
-              <div className="flex items-center gap-3 text-gray-300">
-                <MapPin className="w-5 h-5 text-purple-400" />
-                <span>Safidon, Haryana, India</span>
-              </div>
-              <div className="flex items-center gap-3 text-gray-300">
-                <Phone className="w-5 h-5 text-purple-400" />
-                <Link href="tel:+919034670060" className="hover:text-purple-400 transition-colors">
-                  +91 9034670060
-                </Link>
-              </div>
+      export function Contact() {
+        return (
+          <section id="contact" className="py-32 px-4 sm:px-6 lg:px-8 relative">
+            <div className="max-w-4xl mx-auto">
+              <Card className="bg-gradient-to-br from-purple-500/20 via-pink-500/10 to-blue-500/20 border border-white/20 shadow-2xl">
+                <CardHeader>
+                  <CardTitle className="text-4xl font-bold text-white mb-2 flex items-center gap-2">
+                    <Send className="text-purple-400" /> Contact
+                  </CardTitle>
+                  <p className="text-gray-300 text-lg">Feel free to reach out for collaborations or just a friendly hello 👋</p>
+                </CardHeader>
+                <CardContent>
+                  <form
+                    className="space-y-6"
+                    action="https://formspree.io/f/xwkgyyqg"  
+                    method="POST"
+                    target="_blank"
+                  >
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <Input name="firstName" placeholder="First Name" required />
+                      <Input name="lastName" placeholder="Last Name" required />
+                    </div>
+                    <Input name="email" type="email" placeholder="Email" required />
+                    <Input name="subject" placeholder="Subject" required />
+                    <Textarea name="message" placeholder="Your message..." required />
+                    <Button type="submit" className="w-full">
+                      Send Message
+                    </Button>
+                  </form>
+                  <div className="mt-10 flex flex-col md:flex-row items-center justify-between gap-6 text-gray-400">
+                    <div className="flex items-center gap-2">
+                      <Mail className="w-5 h-5" /> kartikgauttam6@gmail.com
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Github className="w-5 h-5" />
+                      <Link href="https://github.com/Kartikgauttam14" target="_blank" rel="noopener noreferrer">
+                        github.com/Kartikgauttam14
+                      </Link>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Linkedin className="w-5 h-5" />
+                      <Link href="https://linkedin.com/in/kartikgauttam14" target="_blank" rel="noopener noreferrer">
+                        linkedin.com/in/kartikgauttam14
+                      </Link>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
-
-            <div className="flex gap-4">
-              <Link
-                href="https://github.com/Kartikgauttam14"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors"
-              >
-                <Github className="w-5 h-5 text-white" />
-              </Link>
-              <Link
-                href="https://www.linkedin.com/in/kartikgauttam14"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors"
-              >
-                <Linkedin className="w-5 h-5 text-white" />
-              </Link>
-            </div>
-          </div>
-
-          <Card className="bg-white/5 backdrop-blur-sm border-white/10">
-            <CardHeader>
-              <CardTitle className="text-white">Send a Message</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <form id="contact-form" action={handleSubmit} className="space-y-4">
-                <div className="grid grid-cols-2 gap-4">
-                  <Input
-                    name="firstName"
-                    placeholder="First Name"
-                    required
-                    className="bg-white/5 border-white/20 text-white placeholder:text-gray-400"
-                  />
-                  <Input
-                    name="lastName"
-                    placeholder="Last Name"
-                    required
-                    className="bg-white/5 border-white/20 text-white placeholder:text-gray-400"
-                  />
-                </div>
-                <Input
-                  name="email"
-                  type="email"
-                  placeholder="Email Address"
-                  required
-                  className="bg-white/5 border-white/20 text-white placeholder:text-gray-400"
-                />
-                <Input
-                  name="subject"
-                  placeholder="Subject"
-                  required
-                  className="bg-white/5 border-white/20 text-white placeholder:text-gray-400"
-                />
-                <Textarea
-                  name="message"
-                  placeholder="Your Message"
-                  rows={5}
-                  required
-                  className="bg-white/5 border-white/20 text-white placeholder:text-gray-400"
-                />
-
-                {submitMessage && (
-                  <div
-                    className={`p-3 rounded-lg text-sm ${
-                      submitMessage.type === "success"
-                        ? "bg-green-500/20 text-green-300 border border-green-500/30"
+          </section>
+        )
+      }
                         : "bg-red-500/20 text-red-300 border border-red-500/30"
                     }`}
                   >
