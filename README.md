@@ -68,4 +68,3 @@ This project is open source and available under the MIT License.
 ---
 
 Inspired by modern developer portfolios and built to be easily extensible for your own needs.
-# Portfolio
