@@ -5,7 +5,7 @@ name: Next.js
 
 on:
   push:
-    branches: [ "full_update" ]
+    branches: [ "index" ]
   pull_request:
     branches: [ "main" ]
 
