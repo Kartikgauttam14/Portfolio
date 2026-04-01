@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { Github, Linkedin, Mail } from 'lucide-react'
 
+// Fixed: Removed unused ExternalLink import
 export default function Footer() {
   const currentYear = new Date().getFullYear()
 
