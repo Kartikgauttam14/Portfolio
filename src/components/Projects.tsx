@@ -1,7 +1,6 @@
 'use client'
 
 import { ExternalLink, Github } from 'lucide-react'
-import Link from 'next/link'
 
 export default function Projects() {
   const projects = [
