@@ -20,7 +20,7 @@ export default function Footer() {
     },
     {
       label: 'Email',
-      url: 'mailto:kartik.k5553@gmail.com',
+      url: 'mailto:gauttamkartik6@gmail.com',
       icon: Mail,
     },
   ]

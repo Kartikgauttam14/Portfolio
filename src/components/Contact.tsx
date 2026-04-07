@@ -33,8 +33,8 @@ export default function Contact() {
     {
       icon: Mail,
       label: 'Email',
-      value: 'kartik.k5553@gmail.com',
-      link: 'mailto:kartik.k5553@gmail.com',
+      value: 'gauttamkartik6@gmail.com',
+      link: 'mailto:gauttamkartik6@gmail.com',
     },
     {
       icon: Phone,
