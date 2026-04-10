@@ -34,15 +34,24 @@ export default function Projects() {
       description:
         'Transformer-based NLP system using BERT/RoBERTa with explainability features using SHAP and LIME.',
       technologies: ['FastAPI', 'Docker', 'BERT', 'RoBERTa', 'SHAP', 'LIME'],
-      link: '#',
+      link: 'https://fakenewsdetection-india.streamlit.app',
       github: 'https://github.com/Kartikgauttam14/FakeNewsDetection',
+      featured: true,
+    },
+    {
+      title: 'Kirana Store',
+      description:
+        'AI-powered quick-commerce platform for local stores featuring a Liquid Glass UI and Organic Intelligence branding.',
+      technologies: ['React Native', 'Expo', 'Zustand', 'Reanimated', 'TypeScript'],
+      link: '#',
+      github: 'https://github.com/Kartikgauttam14/Kirana-Store',
       featured: true,
     },
     {
       title: 'Techzolo',
       description: 'Technology learning platform with interactive courses and resources.',
       technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
-      link: 'https://techzolo.vercel.app',
+      link: 'https://techzolo.in',
       github: '#',
       featured: false,
     },
@@ -50,8 +59,8 @@ export default function Projects() {
       title: 'Ayushmanbhav Hospital',
       description: 'Hospital management and patient portal with appointment scheduling.',
       technologies: ['React', 'Node.js', 'MongoDB', 'Express'],
-      link: 'https://ayushmanbhav.vercel.app',
-      github: '#',
+      link: 'https://ayushmanbhavhospital.vercel.app',
+      github: 'https://github.com/Kartikgauttam14/AyushmanbhavHospital',
       featured: false,
     },
   ]
